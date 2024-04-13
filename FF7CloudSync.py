@@ -2,8 +2,6 @@ import dropbox
 import glob, os
 import config
 
-#code --extensions-dir D:/VSCodeExtensions to open vscode with new extension location
-
 #print("This should connect to my dropbox")
 #print(os.path.expanduser("~"))
 print("Enter date with dashes")

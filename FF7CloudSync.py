@@ -13,7 +13,7 @@ dbx = dropbox.Dropbox(app_key = config.AppKey, app_secret = config.AppSecret, oa
 def upload_file():
         """upload a file to Dropbox using API v2
         """
-        for file in glob.glob(os.path.expanduser("~/Documents/Square Enix/FINAL FANTASY VII Steam/user_8888305/*.ff7")) :
+        for file in glob.glob(config.PathToSaves + "*.ff7") :
             with open(file, 'rb') as f:
                 dbx.files_upload(f.read(), "/FF7 Saves/("+ date + ")" + os.path.basename(file))
             

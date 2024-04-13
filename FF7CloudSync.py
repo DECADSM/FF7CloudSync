@@ -1,12 +1,14 @@
 import dropbox
 import glob, os
+import config
+
 #code --extensions-dir D:/VSCodeExtensions to open vscode with new extension location
 
 #print("This should connect to my dropbox")
 #print(os.path.expanduser("~"))
 print("Enter date with dashes")
 date = input()
-dbx = dropbox.Dropbox("sl.BzSyo0VyFmfygaYHJGKwyy9Oa7jgIP-PnNfTBHVs9xWdFCqIRGgzZTFsKMdncYZYIfEemvOkrLjfUFDTu1bWJIJy1yZp6223TJ7wb_9Wbiar8UmTMYHouF1QiCSRP_zX_tDwol5_YPRa")
+dbx = dropbox.Dropbox(app_key = config.AppKey, app_secret = config.AppSecret, oauth2_refresh_token = config.RefreshToken)
 #print(dbx.users_get_current_account())
 
 #this was taken from stack overflow : https://stackoverflow.com/questions/23894221/upload-file-to-my-dropbox-from-python-script 
